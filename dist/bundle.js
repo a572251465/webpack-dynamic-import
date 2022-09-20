@@ -1,5 +1,5 @@
 (() => {
-  // 1. 以文件名称为key 实际的调用代码为值
+  // 111. 以文件名称为key 实际的调用代码为值
   var __webpack_modules__ = ({
 
     "./index.js": ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
@@ -12,6 +12,7 @@
   var __webpack_module_cache__ = {};
 
   // 根据模块moduleId 执行对应的方法。 具有缓存特性
+  // 222
   function __webpack_require__(moduleId) {
     // Check if module is in cache
     var cachedModule = __webpack_module_cache__[moduleId];
@@ -49,6 +50,7 @@
 
   (() => {
     __webpack_require__.f = {};
+    // 333.
     __webpack_require__.e = (chunkId) => {
       debugger
       return Promise.all(Object.keys(__webpack_require__.f).reduce((promises, key) => {
@@ -84,6 +86,7 @@
     var inProgress = {};
     var dataWebpackPrefix = "webpack-dynamic-import:";
     // loadScript function to load a script via script tag
+    // 555.
     __webpack_require__.l = (url, done, key, chunkId) => {
       if (inProgress[url]) {
         inProgress[url].push(done);
@@ -163,6 +166,7 @@
       "main": 0
     };
 
+    // 444.
     __webpack_require__.f.j = (chunkId, promises) => {
       // 判断模块 是否被注册
       var installedChunkData = __webpack_require__.o(installedChunks, chunkId) ? installedChunks[chunkId] : undefined;
@@ -239,6 +243,7 @@
     var chunkLoadingGlobal = self["webpackChunkwebpack_dynamic_import"] = self["webpackChunkwebpack_dynamic_import"] || [];
     chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
     // 重写push方法
+    // 666.
     chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
   })();
 
